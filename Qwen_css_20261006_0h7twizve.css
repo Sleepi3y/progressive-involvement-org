@@ -1,0 +1,219 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', Georgia, serif;
+    background-color: #ffffff;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background-color: #7B5EA7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    min-height: 160px;
+    position: relative;
+}
+
+.header-left h1 {
+    font-family: 'Stardos Stencil', cursive;
+    color: #ffffff;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.header-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo svg {
+    filter: drop-shadow(0 0 2px rgba(255,255,255,0.3));
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.mission-title {
+    font-family: 'Stardos Stencil', cursive;
+    color: #ffffff;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.mission-box {
+    border: 2px solid #ffffff;
+    padding: 15px 25px;
+    max-width: 320px;
+    background-color: rgba(123, 94, 167, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.mission-box p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* ===== NEWS SECTION ===== */
+.news-section {
+    padding: 40px 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3rem;
+    color: #7B5EA7;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.newsletter-card {
+    border: 2px solid #C9B8E0;
+    border-radius: 2px;
+}
+
+.newsletter-header {
+    border-bottom: 2px solid #C9B8E0;
+    padding: 12px 15px;
+}
+
+.newsletter-header h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #9B59B6;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.newsletter-body {
+    padding: 20px 15px;
+    min-height: 280px;
+}
+
+.placeholder-text {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #9B59B6;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* ===== DIVIDER ===== */
+.section-divider {
+    border: none;
+    border-top: 3px solid #C9B8E0;
+    margin: 20px 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== EVENTS SECTION ===== */
+.events-section {
+    padding: 30px 30px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.events-title {
+    font-family: 'Stardos Stencil', cursive;
+    font-size: 3.5rem;
+    color: #C9B8E0;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+}
+
+.events-box {
+    border: 2px solid #C9B8E0;
+    min-height: 300px;
+    border-radius: 2px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #C9B8E0;
+    padding: 20px 30px;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-link {
+    font-family: 'Stardos Stencil', cursive;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    transition: opacity 0.3s;
+}
+
+.footer-link:hover {
+    opacity: 0.7;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .header-left h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-right {
+        align-items: center;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .events-title {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

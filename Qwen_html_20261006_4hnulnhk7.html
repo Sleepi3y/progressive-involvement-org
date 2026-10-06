@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressive Involvement Organization</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-left">
+            <h1>PROGRESSIVE<br>INVOLVEMENT<br>ORGANIZATION</h1>
+        </div>
+        <div class="header-center">
+            <div class="logo">
+                <svg viewBox="0 0 120 120" width="100" height="100">
+                    <circle cx="60" cy="60" r="55" fill="none" stroke="white" stroke-width="2"/>
+                    <circle cx="60" cy="60" r="48" fill="none" stroke="white" stroke-width="1"/>
+                    <!-- Flower petals -->
+                    <ellipse cx="60" cy="38" rx="10" ry="16" fill="white" opacity="0.9"/>
+                    <ellipse cx="60" cy="82" rx="10" ry="16" fill="white" opacity="0.9"/>
+                    <ellipse cx="38" cy="60" rx="16" ry="10" fill="white" opacity="0.9"/>
+                    <ellipse cx="82" cy="60" rx="16" ry="10" fill="white" opacity="0.9"/>
+                    <ellipse cx="44" cy="44" rx="10" ry="16" fill="white" opacity="0.9" transform="rotate(-45 44 44)"/>
+                    <ellipse cx="76" cy="76" rx="10" ry="16" fill="white" opacity="0.9" transform="rotate(-45 76 76)"/>
+                    <ellipse cx="76" cy="44" rx="10" ry="16" fill="white" opacity="0.9" transform="rotate(45 76 44)"/>
+                    <ellipse cx="44" cy="76" rx="10" ry="16" fill="white" opacity="0.9" transform="rotate(45 44 76)"/>
+                    <!-- Center circle -->
+                    <circle cx="60" cy="60" r="12" fill="#7B5EA7"/>
+                    <!-- Peace symbol -->
+                    <circle cx="60" cy="60" r="8" fill="none" stroke="white" stroke-width="1.5"/>
+                    <line x1="60" y1="52" x2="60" y2="68" stroke="white" stroke-width="1.5"/>
+                    <line x1="60" y1="60" x2="54" y2="66" stroke="white" stroke-width="1.5"/>
+                    <line x1="60" y1="60" x2="66" y2="66" stroke="white" stroke-width="1.5"/>
+                    <!-- Text around circle -->
+                    <text font-size="7" fill="white" font-family="Arial">
+                        <textPath href="#topArc" startOffset="50%" text-anchor="middle">PROGRESSIVE INVOLVEMENT</textPath>
+                    </text>
+                    <text font-size="7" fill="white" font-family="Arial">
+                        <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">ORGANIZATION</textPath>
+                    </text>
+                    <path id="topArc" d="M 15,60 A 45,45 0 0,1 105,60" fill="none"/>
+                    <path id="bottomArc" d="M 105,60 A 45,45 0 0,1 15,60" fill="none"/>
+                </svg>
+            </div>
+        </div>
+        <div class="header-right">
+            <h2 class="mission-title">OUR MISSION:</h2>
+            <div class="mission-box" id="missionBox">
+                <p>this lifts up and down based off the scroll of the user</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- THIS WEEK'S NEWS -->
+    <section class="news-section">
+        <h2 class="section-title">This week's news</h2>
+        <div class="news-grid">
+            <div class="newsletter-card">
+                <div class="newsletter-header">
+                    <h3>Newsletter</h3>
+                </div>
+                <div class="newsletter-body">
+                    <p class="placeholder-text">img of newsletter<br>whatever</p>
+                </div>
+            </div>
+            <div class="newsletter-card">
+                <div class="newsletter-header">
+                    <h3>Newsletter</h3>
+                </div>
+                <div class="newsletter-body">
+                    <p class="placeholder-text">img of newsletter<br>whatever</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- UPCOMING EVENTS -->
+    <section class="events-section">
+        <h2 class="events-title">UPCOMING EVENTS!</h2>
+        <div class="events-box">
+            <!-- Event content goes here -->
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="#" class="footer-link">Donations Link</a>
+            <a href="#" class="footer-link">INSTAGRAM</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
