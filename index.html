@@ -5,25 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Progressive Involvement Organization</title>
 
-    <!-- 
-        ============================================
-        GOOGLE FONTS - Change fonts here if you want
-        ============================================
-        The design uses a bold, stencil-like font for headings.
-        You can replace the font URLs below with any Google Font.
-    -->
+    <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
     <style>
-        /* 
-            ============================================
-            COLOR VARIABLES - EDIT COLORS HERE
-            ============================================
-            Change these hex codes to rebrand the whole site.
-        */
+        /* COLOR VARIABLES */
         :root {
             --dark-purple: #7B5EA7;       /* Header background */
-            --medium-purple: ##745CBB;     /* Main text/accents */
+            --medium-purple: #745CBB;     /* FIXED: Removed the extra '#' here */
             --light-purple: #C9B8E8;      /* Borders and light text */
             --very-light-purple: #D4C4E8; /* Footer background */
             --white: #FFFFFF;
@@ -42,13 +31,7 @@
             color: var(--medium-purple);
         }
 
-        /* 
-            ============================================
-            HEADER SECTION
-            ============================================
-            The purple bar at the top with the org name,
-            logo, and mission statement.
-        */
+        /* HEADER SECTION */
         header {
             background-color: var(--dark-purple);
             color: var(--white);
@@ -58,9 +41,10 @@
             padding: 20px 40px;
             min-height: 150px;
             position: relative;
+            flex-wrap: wrap; /* Helps on smaller screens */
+            gap: 20px;
         }
 
-        /* Org name on the left side of header */
         .org-name {
             font-family: 'Anton', sans-serif;
             font-size: 2.2rem;
@@ -69,7 +53,6 @@
             letter-spacing: 2px;
         }
 
-        /* Logo in the center of header */
         .logo {
             width: 100px;
             height: 100px;
@@ -78,23 +61,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /* 
-                REPLACE THE SRC IN THE HTML BELOW WITH YOUR OWN LOGO IMAGE.
-                For now, this is a placeholder circle.
-            */
+            overflow: hidden; /* Keeps the image inside the circle */
         }
-        
-    <!-- Logo Section -->
-    <header>
-        <img src="logo.png" alt="PIO Logo" style="max-width: 200px;">
-        <h1>PROGRESSIVE INVOLVEMENT ORGANIZATION</h1>
-    </header>
 
-    <!-- Mission Statement Section -->
-    <section>
-        <p><strong>A safe space for advocates to take an active role in our communities and JOYMAXX ☮️
-Founded in 2026 at the University of North Carolina Wilmington.</strong></p>
-    </section>
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mission-area {
+            flex: 1;
+            min-width: 250px;
+        }
 
         .mission-area h2 {
             font-family: 'Anton', sans-serif;
@@ -103,13 +82,7 @@ Founded in 2026 at the University of North Carolina Wilmington.</strong></p>
             letter-spacing: 2px;
         }
 
-        /* 
-            ============================================
-            MISSION BOX - SCROLLS UP AND DOWN
-            ============================================
-            This box moves with the user's scroll.
-            We use "position: sticky" to make it float.
-        */
+        /* MISSION BOX */
         .mission-box {
             border: 3px solid var(--white);
             padding: 15px 20px;
@@ -118,22 +91,17 @@ Founded in 2026 at the University of North Carolina Wilmington.</strong></p>
             text-align: center;
             line-height: 1.4;
             position: sticky;
-            top: 20px; /* How far from the top it sticks */
+            top: 20px;
             background-color: var(--dark-purple);
         }
 
-        /* 
-            ============================================
-            MAIN CONTENT AREA
-            ============================================
-        */
+        /* MAIN CONTENT AREA */
         main {
             padding: 40px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* Section titles */
         .section-title {
             text-align: center;
             font-family: 'Playfair Display', serif;
@@ -143,27 +111,19 @@ Founded in 2026 at the University of North Carolina Wilmington.</strong></p>
             margin-bottom: 30px;
         }
 
-        /* 
-            ============================================
-            NEWSLETTER GRID - TWO COLUMNS
-            ============================================
-            The "This week's news" section with two
-            newsletter cards side by side.
-        */
+        /* NEWSLETTER GRID */
         .newsletter-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            grid-template-columns: 1fr 1fr;
             gap: 30px;
             margin-bottom: 40px;
         }
 
-        /* Each newsletter card */
         .newsletter-card {
             border: 3px solid var(--light-purple);
             padding: 0;
         }
 
-        /* The "Newsletter" label at the top of each card */
         .newsletter-card h3 {
             background-color: var(--white);
             color: var(--medium-purple);
@@ -174,9 +134,8 @@ Founded in 2026 at the University of North Carolina Wilmington.</strong></p>
             border-bottom: 3px solid var(--light-purple);
         }
 
-        /* The image placeholder area inside each card */
         .newsletter-image {
-            height: 300px; /* Change this to adjust box height */
+            height: 300px;
             display: flex;
             align-items: flex-start;
             padding: 15px;
@@ -185,46 +144,29 @@ Founded in 2026 at the University of North Carolina Wilmington.</strong></p>
             color: var(--medium-purple);
         }
 
-        /* 
-            To add a real image, replace the text inside
-            .newsletter-image with an <img> tag like:
-            <img src="your-image.jpg" alt="Newsletter" style="width:100%; height:100%; object-fit:cover;">
-        */
-
-        /* Divider line between sections */
         .divider {
             border: none;
             border-top: 3px solid var(--light-purple);
             margin: 40px 0;
         }
 
-        /* 
-            ============================================
-            UPCOMING EVENTS SECTION
-            ============================================
-        */
+        /* UPCOMING EVENTS SECTION */
         .events-title {
             text-align: center;
             font-family: 'Anton', sans-serif;
             font-size: 3.5rem;
-            color: var(--light-purple); /* Very light purple text */
+            color: var(--light-purple);
             letter-spacing: 5px;
             margin-bottom: 30px;
         }
 
         .events-box {
             border: 3px solid var(--light-purple);
-            height: 350px; /* Change this to adjust the box height */
+            height: 350px;
             padding: 20px;
         }
 
-        /* 
-            ============================================
-            FOOTER
-            ============================================
-            The light purple bar at the bottom with
-            donations link and Instagram.
-        */
+        /* FOOTER */
         footer {
             background-color: var(--very-light-purple);
             padding: 20px 40px;
@@ -235,7 +177,7 @@ Founded in 2026 at the University of North Carolina Wilmington.</strong></p>
         }
 
         footer a {
-            color: var(--white);
+            color: var(--dark-purple); /* Changed to dark purple so it's visible on light background */
             text-decoration: none;
             font-family: 'Anton', sans-serif;
             font-size: 1.5rem;
@@ -249,17 +191,11 @@ Founded in 2026 at the University of North Carolina Wilmington.</strong></p>
         .footer-instagram {
             font-family: 'Anton', sans-serif;
             font-size: 1.8rem;
-            color: var(--white);
+            color: var(--dark-purple);
             letter-spacing: 3px;
         }
 
-        /* 
-            ============================================
-            RESPONSIVE DESIGN - MOBILE FRIENDLY
-            ============================================
-            This makes the site look good on phones.
-            You can adjust the breakpoint (768px) if needed.
-        */
+        /* RESPONSIVE DESIGN - MOBILE FRIENDLY */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -277,7 +213,7 @@ Founded in 2026 at the University of North Carolina Wilmington.</strong></p>
             }
 
             .newsletter-grid {
-                grid-template-columns: 1fr; /* Stack into one column on mobile */
+                grid-template-columns: 1fr;
             }
 
             .section-title {
@@ -298,30 +234,69 @@ Founded in 2026 at the University of North Carolina Wilmington.</strong></p>
 </head>
 <body>
 
-    <!-- 
-        ============================================
-        HEADER
-        ============================================
-        Edit the org name, logo, and mission text below.
-    -->
+    <!-- HEADER -->
     <header>
         <!-- LEFT: Organization Name -->
-        <!-- EDIT: Change "PROGRESSIVE INVOLVEMENT ORGANIZATION" to your org's name -->
         <div class="org-name">
             PROGRESSIVE<br>
             INVOLVEMENT<br>
             ORGANIZATION
         </div>
     
+        <!-- CENTER: Logo -->
         <div class="logo">
+            <!-- Make sure 'Logo.jpg' is in the exact same folder as this HTML file -->
             <img src="Logo.jpg" alt="Organization Logo">
         </div>        
         
-    <div class="mission-area">
-        <div class="mission-box">
-            A safe space for advocates to take an active role in our communities and JOYMAXX ☮️
-Founded in 2026 at the University of North Carolina Wilmington.
+        <!-- RIGHT: Mission Statement -->
+        <div class="mission-area">
+            <div class="mission-box">
+                A safe space for advocates to take an active role in our communities and JOYMAXX ☮️<br>
+                Founded in 2026 at the University of North Carolina Wilmington.
+            </div>
         </div>
-    </div>
-</header>
-       
+    </header>
+
+    <!-- MAIN CONTENT (Add your newsletter and events sections here) -->
+    <main>
+        <h2 class="section-title">This Week's News</h2>
+        
+        <div class="newsletter-grid">
+            <div class="newsletter-card">
+                <h3>Newsletter</h3>
+                <div class="newsletter-image">
+                    <!-- Replace with: <img src="news1.jpg" alt="News 1" style="width:100%; height:100%; object-fit:cover;"> -->
+                    [Image Placeholder 1]
+                </div>
+            </div>
+            <div class="newsletter-card">
+                <h3>Newsletter</h3>
+                <div class="newsletter-image">
+                    <!-- Replace with: <img src="news2.jpg" alt="News 2" style="width:100%; height:100%; object-fit:cover;"> -->
+                    [Image Placeholder 2]
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <h2 class="events-title">UPCOMING EVENTS</h2>
+        <div class="events-box">
+            <!-- Add your event details here -->
+            <p style="text-align: center; padding-top: 150px; font-weight: bold;">Event details coming soon...</p>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#donate">Donate</a>
+        
+        <!-- INSTAGRAM LINK: Replace "YOUR_USERNAME" with your actual handle -->
+        <a href="https://www.instagram.com/theuncw_pio/" target="_blank" class="footer-instagram">
+            📷 INSTAGRAM
+        </a>
+    </footer>
+
+</body>
+</html>
